@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB2</title>
+    <!-- <div style="width: 1000px;
+    margin: 25px;
+    padding: 10px;
+    border: solid 2px black;">
+    <h2 style="margin: 25px;">แบบฟอร์มจองทัวร์ </h2>
+    </div> -->
+</head>
+
+<body>
+
+    <style>
+        .text {
+            text-align: center;
+        }
+        
+        .box {
+            background-color: aliceblue;
+            border: dotted 2px rgb(0, 0, 0);
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+
+    <form>
+        <div style="width: 1000px;
+    margin: 25px;
+    padding: 10px;
+    border: solid 2px black;">
+            <h2 style="margin: 25px;">แบบฟอร์มจองทัวร์ </h2>
+
+            <fieldset>
+                <legend>ข้อมูลทั่วไป</legend>
+                ชื่อ-สกุล:
+                <div><input type="text" name="text" placeholder="กรอกชื่อ-สกุล" pattern="[ก-๏A-Za-z\s]{2,}"required> * </div>
+                Email:
+                <div><input type="email" name="text" required> * </div>
+                โทรศัพท์:
+                <div><input type="text" name="tell" value="+66" pattern="^+66\d{9}" required> * </div>
+                ที่อยู่:
+                <div><textarea cols="45" rows="5"></textarea></div>
+                รหัสไปรษณีย์: <input type="text" name="รหัสไปรษณีย์" size="10" maxlength="5" pattern="^[0-9]{5}">
+                <div></div>
+                รูปผู้จอง: <input type="file" name="รูปผู้จอง">
+            </fieldset>
+
+            <div style="margin: 15px;"></div>
+
+            <fieldset>
+                <legend>ข้อมูลการเข้าสู่ระบบ</legend>
+                Username:
+                <div><input type="text" name="Username" pattern="[A-Za-z][A-Za-z0-9]{8,}"></div>
+                <I><B>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</B></I>
+                <div style="margin-top: 10px;">Password:</div>
+                <div><input type="text" name="Password" minlength="8"></div>
+                <I><B>ประกอบด้วยตัวอักขระอะไรก็ได้ 8 ตัวขึ้นไป</B></I><br>
+            </fieldset>
+
+            <div style="margin: 15px;"></div>
+
+            <fieldset>
+                <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+                <label>
+                    แพคเก็จทัวร์:
+                    <select name="Country">
+                        <option value="select">--select--</option>
+                        <option value="Argentina" >อาร์เจนติน่า</option>
+                        <option value="Brazil">บราซิล</option>
+                        <option value="England">อังกฤษ </option>
+                        <option value="Spain">สเปน </option>
+                        <option value="Greece">กรีซ </option>
+                        </select>
+                        </label>
+
+                <div>วันที่เดินทาง:<input type="date" name="calendar"></div>
+                <div>จำนวนผู้เดินทาง:<input type="number" name="จำนวนผู้เดินทาง" size="3" min="1" max="10"></div>
+                <div>เน้นการท่องเที่ยวแบบใด ?</div>
+                <div><input type="checkbox" />ช็อปปิ้ง</div>
+                <div><input type="checkbox" />ธรรมชาติ</div>
+                <div><input type="checkbox" />ทะเล</div>
+
+            </fieldset>
+
+
+
+            <div style="margin-top: 20px;" :>
+                ยอมรับเงื่อนไขและข้อตกลง
+                <input type="radio" name="เงื่อนไข" value="I agree" checked="checked" />I agree
+                <input type="radio" name="เงื่อนไข" value="I disagree" /> disagree
+                <input type="submit" value="จอง">
+            </div>
+
+        </div>
+</body>
+
+</html>
+</form>
