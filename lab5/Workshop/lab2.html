@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2</title>
+    <script>
+        function cal(){
+        let number1 = document.getElementById("number1").value
+        let number2 = document.getElementById("number2").value
+        // let number3 = document.getElementById("number3").value
+
+        let pp = document.getElementById("pp").value
+            if(pp == "+"){
+                // number3 = parseInt(number1) + parseInt(number2)
+                document.getElementById("number3").value = parseInt(number1)+parseInt(number2)
+            }
+            else if(pp == "-"){
+                document.getElementById("number3").value = parseInt(number1)-parseInt(number2)
+            }
+            else if(pp == "*"){
+                document.getElementById("number3").value = parseInt(number1) * parseInt(number2)
+
+            }
+            else if(pp == "/"){
+                document.getElementById("number3").value = parseInt(number1) / parseInt(number2)
+            }
+                
+            
+        
+        
+        }
+        window.onload = function(){
+            let button1 = document.getElementById("button1")
+            button1.onclick = cal;
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="text" id="number1">
+    <select id="pp">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+    <input type="text" id="number2">
+    =
+    <input type="text" id="number3">
+
+    <input type="button" id="button1" value="GoGo" onclick="cal()">
+</body>
+</html>

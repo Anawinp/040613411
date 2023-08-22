@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function green1(){
+            let color1 = document.getElementById("a")
+                color1.style.color="green"  
+        }
+        function green2(){
+            let color2 = document.getElementById("b")
+                color2.style.color="green"
+        }
+        function green3(){
+            let color3 = document.getElementById("c")
+                color3.style.color="green"   
+        }
+    </script>
+</head>
+<body>
+
+        Name: <input type="text" id="a" onblur="green1()"><br> 
+        Age: <input type="text" id="b" onblur="green2()"><br> 
+        Birthday: <input type="text" id="c" onblur="green3()"><br>
+
+</body>
+</html>

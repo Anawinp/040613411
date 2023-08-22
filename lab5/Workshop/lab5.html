@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td,tr,th{
+            border:1px solid black;
+        }
+    </style>
+    <script>
+        function addName(){
+            let textname = document.getElementById("name").value
+            let textaddress = document.getElementById("address").value
+            let textphone = document.getElementById("phone").value
+            
+            let cell1 = document.createElement("td");
+            let cell2 = document.createElement("td");
+            let cell3 = document.createElement("td");
+
+            cell1.textContent = textname;
+            cell2.textContent = textaddress;
+            cell3.textContent = textphone;
+
+            let row = document.createElement("tr");
+            row.append(cell1);
+            row.append(cell2);
+            row.append(cell3);
+
+            let header = document.getElementById("content");
+            header.append(row);
+            // let getCreate1 = document.createElement("th");
+            // getCreate1.innerHTML = getname;
+            // let gettabaleadd1 = document.getElementById("tb");
+            // gettabaleadd1.appendChild(getCreate1)
+
+            // let getCreate2 = document.createElement("th");
+            // getCreate2.innerHTML = getaddress;
+            // let gettabaleadd2 = document.getElementById("tb");
+            // gettabaleadd2.appendChild(getCreate2)
+
+            // let getCreate3 = document.createElement("th");
+            // getCreate3.innerHTML = getphone;
+            // let gettabaleadd3 = document.getElementById("tb");
+            // gettabaleadd3.appendChild(getCreate3)
+
+            // let getCreate2 = document.createElement("th");
+            // getCreate2.innerHTML = getaddress;
+            // let getCreate3 = document.createElement("th");
+            // getCreate3.innerHTML = getphone;
+
+            // let getCreateul = document.getElementById("th");
+            // getCreateul.appendChild(appendChild)
+           
+        }
+    </script>
+</head>
+<body>
+    
+    ชื่อลูกค้า : <input type="text" id="name"><br>
+    ที่อยู่ : <input type="text" id="address"><br>
+    โทรศัพท์ : <input type="text" id="phone"><br>
+
+    <input type = "button" value = "เพิ่ม" onclick="addName()"><br><br>
+<table>
+    <thead> 
+        <th>ชื่อลูกค้า</th>
+        <th>ที่อยู่</th>
+        <th>โทรศัพท์</th>
+    </thead>
+    <tbody id="content">
+        <tr></tr>
+    </tbody>
+
+
+</table>
+        
+    
+</body>
+</html>

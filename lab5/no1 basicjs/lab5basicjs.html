@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let student = [{
+        fullname: 'นายตั้งใจ เรียนมาก',
+        age: 18,
+        year: 1,
+        gpa: 3.40,
+        help: true
+    }, 
+    {
+        fullname: 'นายสง่ งาน ตลอดมา',
+        age: 19,
+        year: 2,
+        gpa: 3.00,
+        help: false
+    }, 
+    {
+        fullname: 'นางสาวใสใ่ จ ดงีาม',
+        age: 20,
+        year: 3,
+        gpa: 2.90,
+        help: true
+    }
+]
+
+    console.log(student.length)
+    // console.log(student[1].age)
+    for(let i=0;i<student,length;i++){
+        if((student[i].gpa > 3.20) || (student[i].year>=2 && student[i].help == true && student[i].gpa > 2.75)){
+            console.log(student[i].fullname+"เกิดเมื่อปี"+(2564-student[i].age)+"ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยเกรดเฉลี่ยถึงเกณฑ์และยัง"+
+            (student[i].help == true ? "ช่วยงานภาควิชา" : "ไม่ช่วยงานภาควิชา")) 
+        }else{
+            console.log(student[i].fullname+"เกิดเมื่อปี"+(2564-student[i].age)+"ไม่ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยเกรดเฉลี่ยถึงเกณฑ์และยัง"+
+            (student[i].gpa >2.75 ? "ถึงเกณฑ์" : "ไม่ถึงเกณฑ์")+"และยัง"+(student[i].help == true ? "ช้่วยงานภาควิชาด้วย": "ไม่ได้ช่วยงาน"))
+        }
+    }
+    for(let i=0; i<4; i++){
+        console.log("ชั้นปีที่"+(i+1))
+        let check = 0;
+        for(const j of student){
+            if(j.year == i+1){
+                if((j.gpa > 3.2) || (j.year >=2 && j.help == true && j.gpa > 2.75)){
+                    check = 1;
+                    console.log(j.fullname+"เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยัง"+(j.help == true ? "ช่วยงานภาควิชาด้วย" : "ไม่ได้ช่วยงานภาควิชา"))    
+                }
+            }
+            if(check ==0){
+                console.log("ไม่มี")
+            }
+        }
+    }
+</script>
+
+</html>
