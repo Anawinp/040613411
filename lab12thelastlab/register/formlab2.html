@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function send(){
+            request = new XMLHttpRequest();
+            request.onreadtstatechange = showResult;
+
+            var keyword = document.getElementById("keyword").value;
+            var url = "check.php?keyword=" + keyword;
+            request.oprn("GET",url,true);
+            request.send(null);
+        }
+        function showResult(){
+            if(request.readyState == 4){
+                if(request.status == 200)
+                    document.getElementById("result").innerHTML = request.responseText;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h1>ค้นหาข้อมูลสมาชิก</h1>
+        
+        Username:<input id="keyword" type="text" onblur="checkUsername()">
+        <input id="submit" type="submit" value="submit">
+    </form>
+</body>
+</html>

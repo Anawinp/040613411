@@ -1,0 +1,17 @@
+#username { 
+  padding: 0 20px 0 2px; 
+}
+.thinking { 
+	background: white url("img/checking.gif") no-repeat; 
+	background-position: 150px 1px;   
+}
+
+.approved { 
+	background: white url("img/true.gif") no-repeat; 
+	background-position: 150px 1px;   
+}
+
+.denied { 
+	background: #FF8282 url("img/false.gif") no-repeat; 
+	background-position: 150px 1px;   
+}
